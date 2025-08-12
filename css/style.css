@@ -1,0 +1,96 @@
+/* ====== Estilos globales ====== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* ====== Títulos ====== */ 
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    color: #222;
+}
+
+h2 {
+    color: #444;
+}
+
+/* ====== Imágenes ====== */
+.img-inicio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== Botones ====== */
+.btn-primary {
+    background-color: #ff6f00;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e65100;
+}
+
+/* ====== Tarjetas ====== */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== Footer ====== */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ====== Formularios ====== */
+input, textarea {
+    border-radius: 8px !important;
+}
+
+/* ====== Responsividad ====== */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
