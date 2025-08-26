@@ -1,0 +1,17 @@
+/* ====== Navbar ====== */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-link {
+    transition: 0.3s;
+
+    &:hover {
+      color: #ffc107 !important;
+    }
+  }
+}
