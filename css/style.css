@@ -1,74 +1,108 @@
+@charset "UTF-8";
 /* ====== Estilos globales ====== */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 /* ====== Navbar ====== */
 .navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.navbar .nav-link {
+  transition: 0.3s;
+}
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
 }
 
-.navbar-brand {
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+/* ====== Navbar ====== */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.nav-link {
-    transition: 0.3s;
+.navbar .navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
 }
-
-.nav-link:hover {
-    color: #ffc107 !important;
+.navbar .nav-link {
+  transition: 0.3s;
 }
-
-/* ====== Títulos ====== */ 
-
-h1, h2, h3 {
-    font-weight: bold;
-}
-
-h1 {
-    color: #222;
-}
-
-h2 {
-    color: #444;
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
 }
 
 /* ====== Imágenes ====== */
 .img-inicio {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* ====== Botones ====== */
 .btn-primary {
-    background-color: #ff6f00;
-    border: none;
-    transition: background-color 0.3s ease;
+  background-color: #ff6f00;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #e65100;
 }
 
-.btn-primary:hover {
-    background-color: #e65100;
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  z-index: 1000;
+}
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+}
+.btn-whatsapp i, .btn-whatsapp svg {
+  font-size: 28px;
+  fill: white;
 }
 
 /* ====== Tarjetas ====== */
 .card {
-    border: none;
-    border-radius: 10px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ====== Footer ====== */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 footer{
     position: fixed;
     bottom: 0;
@@ -83,40 +117,19 @@ footer{
     margin: 0px
 }
 
-.btn-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    font-size: 28px;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    transition: transform 0.2s;
-    z-index: 1000;
-}
-.btn-whatsapp:hover {
-    transform: scale(1.1);
-}
-
-
 /* ====== Formularios ====== */
 input, textarea {
-    border-radius: 8px !important;
+  border-radius: 8px !important;
 }
 
 /* ====== Responsividad ====== */
 @media (max-width: 576px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
 }
+
+/*# sourceMappingURL=estilo.css.map */
