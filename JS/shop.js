@@ -34,12 +34,12 @@ function obtenerSeleccionProducto() {
     mensajeProductos += "\nIngresa el ID del producto que quieres agregar al carrito o '0' para finalizar:";
 
     let idProducto = prompt(mensajeProductos);
-    // Validamos que la entrada sea un número
+   
     while (isNaN(idProducto) || (idProducto !== '0' && !productos.some(p => p.id == idProducto))) {
         alert("Por favor, ingresa un ID de producto válido o '0' para salir.");
         idProducto = prompt(mensajeProductos);
     }
-    return parseInt(idProducto); // Convertimos la entrada a número entero
+    return parseInt(idProducto);
 }
 
 // 2. Función para agregar producto al carrito y calcular subtotales (Procesamiento de datos)
@@ -65,7 +65,7 @@ function agregarProductoAlCarrito(idProducto) {
                 subtotal: cantidad * productoEncontrado.precio
             });
         }
-        productoEncontrado.stock -= cantidad; // Actualizamos el stock
+        productoEncontrado.stock -= cantidad; 
         console.log(`Se agregaron ${cantidad} unidades de "${productoEncontrado.nombre}" al carrito.`);
         console.log(`Stock restante de "${productoEncontrado.nombre}": ${productoEncontrado.stock}`);
     } else {
@@ -93,7 +93,7 @@ function mostrarCarritoYTotal() {
     mensajeCarrito += `\nSubtotal: $${totalCarrito.toFixed(2)}`;
 
     // Aplicar descuento si aplica
-    if (totalCarrito > 5000) { // Ejemplo: descuento si el total es mayor a $5000
+    if (totalCarrito > 5000) { 
         const descuento = totalCarrito * DESCUENTO_POR_MONTO;
         totalCarrito -= descuento;
         mensajeCarrito += `\nDescuento (10% por compra > $5000): -$${descuento.toFixed(2)}`;
@@ -115,4 +115,26 @@ function mostrarCarritoYTotal() {
 function preguntarContinuar() {
     return confirm("¿Deseas agregar otro producto al carrito?");
 }
+// --- INTERACCIÓN PRINCIPAL DEL SIMULADOR ---
+let continuarComprando = true;
+
+while (continuarComprando) {
+    const idSeleccionado = obtenerSeleccionProducto();
+
+    if (idSeleccionado === 0) {
+        continuarComprando = false;
+    } else {
+        agregarProductoAlCarrito(idSeleccionado);
+        // Preguntamos si quiere seguir comprando SOLO si no ha decidido salir con '0'
+        if (continuarComprando) {
+             continuarComprando = preguntarContinuar();
+        }
+    }
+}
+
+// Al finalizar la compra, mostramos el resumen del carrito
+mostrarCarritoYTotal();
+
+alert("¡Gracias por visitar FUERZA-TOTAL! Vuelve pronto.");
+console.log("Simulador finalizado.");
 
